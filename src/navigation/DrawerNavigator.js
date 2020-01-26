@@ -10,6 +10,9 @@ import Ratings from '../drawer/ratings';
 import Pricing from '../drawer/pricing';
 import Login from '../drawer/login';
 import Lists from '../drawer/lists';
+
+import TableTennisDrills from '../drawer/tableTennisDrills';
+
 import FontsDrawerItem from '../drawer/Fonts';
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
@@ -40,8 +43,12 @@ const customContentComponent = props => (
 
 const DrawerNavigator = createDrawerNavigator(
   {
+    TableTennisDrills: {
+      path: '/ttdrills',
+      screen: TableTennisDrills,
+    },
     Home: {
-      path: '/home',
+      path: '/home2',
       screen: HomeNavigator,
     },
     Login: {
@@ -66,7 +73,7 @@ const DrawerNavigator = createDrawerNavigator(
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'TableTennisDrills',
     contentOptions: {
       activeTintColor: '#548ff7',
       activeBackgroundColor: 'transparent',
